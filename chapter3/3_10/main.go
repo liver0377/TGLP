@@ -1,11 +1,9 @@
 package main
 
-import "bytes"
-
-func main() {
-	var s string = "12"
-	println(comma(s))
-}
+import (
+	"bytes"
+	"fmt"
+)
 
 func comma(s string) string {
 	if len(s) <= 3 {
@@ -30,4 +28,9 @@ func comma(s string) string {
 		}
 	}
 	return buf.String()
+}
+
+func main() {
+	var s string = "123456"
+	fmt.Println(comma(s))
 }
